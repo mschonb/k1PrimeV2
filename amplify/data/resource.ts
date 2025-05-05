@@ -10,6 +10,14 @@ const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
+      isDone: a.boolean(),
+    })
+    .authorization((allow) => [allow.publicApiKey()]),
+
+    House: a.model({
+      address: a.string().required(),
+      tour: a.string(),
+      zip: a.string(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });
