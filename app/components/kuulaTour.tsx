@@ -1,8 +1,8 @@
 "use client";
-export default function KuulaEmbed() {
+export default function KuulaEmbed({tourUrl} : {tourUrl: string}) {
 return (
     <iframe
-    src="https://kuula.co/share/collection/71mp3?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1&inst=es"
+    src= {tourUrl}
     className="w-full h-full"/>
 );
 }
