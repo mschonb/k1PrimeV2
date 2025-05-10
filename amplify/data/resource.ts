@@ -18,6 +18,11 @@ const schema = a.schema({
       address: a.string().required(),
       tour: a.string(),
       zip: a.string(),
+      bedrooms: a.integer(),
+      bathrooms: a.float(),
+      buyprice: a.float(),
+      rentprice: a.float(),
+      description: a.string(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });
